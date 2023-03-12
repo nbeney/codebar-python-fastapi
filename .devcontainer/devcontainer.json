@@ -7,10 +7,10 @@
   "updateContentCommand": "pip install -r requirements.txt",
   "postCreateCommand": "",
   "postAttachCommand": {
-    "server": "flask --debug run"
+    "server": "uvicorn main:app --reload"
   },
   "portsAttributes": {
-    "5000": {
+    "8000": {
       "label": "Application",
       "onAutoForward": "openPreview"
     }
@@ -18,7 +18,7 @@
   "customizations": {
     "codespaces": {
       "openFiles": [
-        "templates/index.html"
+        "main.py"
       ]
     },
     "vscode": {
@@ -27,5 +27,5 @@
       ]
     }
   },
-  "forwardPorts": [5000]
+  "forwardPorts": [8000]
 }
